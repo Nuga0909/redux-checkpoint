@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import AddTasks from "./AddTasks";
+import Task from "./Task";
 
 function ListTask() {
   return (
-    <div>ListTask</div>
-  )
+    <>
+      <AddTasks />
+      <Task />
+      <div>ListTask</div>
+    </>
+  );
 }
 
-export default ListTask
+export default ListTask;
