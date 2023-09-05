@@ -7,3 +7,13 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+div.list-group-item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+ width: 70%;
+}
