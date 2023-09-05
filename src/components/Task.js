@@ -17,6 +17,8 @@ const Task = ({ id, description, isDone }) => {
         setIsEditing(false);
     };
 
+    const getTaskClassName = () => isDone ? "done-task" : "pending-task";
+
     return (
         <ListGroup>
             <ListGroup.Item>
@@ -27,8 +29,8 @@ const Task = ({ id, description, isDone }) => {
                     </>
                 ) : (
                     <>
-                        <h3>{description}</h3>                        
-                        <Button variant="warning" onClick={handleToggle}>
+                        <h3 className={getTaskClassName()}>{description}</h3>                        
+                        <Button variant="warning" onClick={handleToggle} >
                             {isDone ? "Undo" : "Done"}
                         </Button>
                         <Button variant="dark" onClick={handleDelete}>Delete</Button>
